@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UFO Task Runner</title>
+</head>
+<body>
+    <h1>Run a UFO Task</h1>
+    <form action="/ufo" method="post">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task" value="default_task" required><br><br>
+        
+        <label for="mode">Mode:</label>
+        <input type="text" id="mode" name="mode" value="normal" required><br><br>
+        
+        <label for="plan">Plan:</label>
+        <input type="text" id="plan" name="plan"><br><br>
+        
+        <label for="request">Request:</label><br>
+        <textarea id="request" name="request" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Submit Task">
+    </form>
+</body>
+</html>
