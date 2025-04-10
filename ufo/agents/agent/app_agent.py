@@ -287,7 +287,9 @@ class AppAgent(BasicAgent):
 
         return retrieved_docs
 
-    def rag_demonstration_retrieve(self, request: str, demonstration_top_k: int) -> str:
+    def rag_demonstration_retrieve(
+        self, request: str, demonstration_top_k: int
+    ) -> List[Dict[str, Any]]:
         """
         Retrieving demonstration examples for the user request.
         :param request: The user request.
@@ -316,11 +318,8 @@ class AppAgent(BasicAgent):
                         "Tips": tips,
                     }
                 )
-        else:
-            examples = []
-            tips = []
 
-        return examples, tips
+        return retrieved_docs
 
     def process(self, context: Context) -> None:
         """
